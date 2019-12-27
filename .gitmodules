@@ -1,0 +1,3 @@
+[submodule "themes/gruvbox"]
+	path = themes/gruvbox
+	url = git@github.com:cvdub/gruvbox-contrib.git
