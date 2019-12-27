@@ -1,0 +1,62 @@
+* Theme
+Update the theme used by all of your applications with a single
+command. Each application has its own update theme script, so adding
+support for additional applications, or making it work with your
+bizarre configuration is as easy as writing/updating a simple script.
+
+** Configuration
+*** Config file location
+~theme~ looks for your configuration file in the following locations:
+ 1. ~XDG_CONFIG_HOME/theme/config~
+ 2. ~~/.config/theme/conifg~
+
+*** Default theme
+Use the ~default~ keyword to set your default theme in your config file.
+
+#+begin_example
+default my-default-theme
+#+end_example
+
+*** Alternate theme
+Use the ~alternate~ keyword to set your alternate theme in your config
+file.
+
+#+begin_example
+default my-default-theme
+#+end_example
+
+** Usage
+Call ~theme~ with no parameters to enable your default theme.
+Subsequent calls to ~theme~ with no parameters will alternate between
+your alternate and default themes.
+
+To activate a specific theme, pass that theme name as a parameter:
+
+#+begin_example
+$ theme my-specific-theme
+#+end_example
+
+** Adding additional themes
+Themes are located in the ~themes~ directory. Each theme has
+sub-directories corresponding to various applications.
+
+#+begin_example
+themes
+└── gruvbox
+   ├── deepin-terminal
+   ├── iterm2
+   ├── konsole
+   ├── mintty
+   ├── osx-terminal
+   └── ...
+#+end_example
+
+The naming conventions and structure of theme files are unique to each
+application.
+
+** Adding support for additional applications
+Theme activation scripts for each application are located in the
+~scripts~ directory. These scripts expect two parameters, the name of
+theme to activate, and an optional variant, i.e. light, dark, etc.
+Each script contains the commands needed to activate a theme on its
+application.
