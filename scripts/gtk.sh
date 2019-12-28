@@ -21,5 +21,6 @@ GTK2_CONFIG_FILE=~/.gtkrc-2.0
 QT_CONFIG_FILE=$CONFIG_DIR/qt5ct/qt5ct.conf
 
 gsettings set org.gnome.desktop.interface gtk-theme "$GTK_THEME"
-sed -i 's/gtk-theme-name=.*/gtk-theme-name="'"$GTK_THEME"'"/' $GTK2_CONFIG_FILE
+sed -i 's/gtk-theme-name=.*/gtk-theme-name='"$GTK_THEME"'/' "$GTK3_CONFIG_FILE"
+sed -i 's/gtk-theme-name=.*/gtk-theme-name="'"$GTK_THEME"'"/' "$GTK2_CONFIG_FILE"
 sed -i 's/style=.*/style='"$GTK_THEME"'/' $QT_CONFIG_FILE
