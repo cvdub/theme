@@ -19,4 +19,4 @@ cp "$TERMITE_CONFIG_DIR/base-config" "$TERMITE_CONFIG_DIR/config"
 cat "$TERMITE_THEME" >> "$TERMITE_CONFIG_DIR/config"
 
 # Reload config
-killall -USR1 termite
+killall -USR1 termite > /dev/null 2>&1
