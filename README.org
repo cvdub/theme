@@ -7,14 +7,14 @@ bizarre configuration is as easy as writing/updating a simple script.
 ** Configuration
 *** Config file location
 ~theme~ looks for your configuration file in the following locations:
- 1. ~XDG_CONFIG_HOME/theme/config~
- 2. ~~/.config/theme/conifg~
+ 1. XDG_CONFIG_HOME/theme/config
+ 2. ~/.config/theme/conifg
 
 *** Default theme
 Use the ~default~ keyword to set your default theme in your config file.
 
 #+begin_example
-default my-default-theme
+$ default my-default-theme
 #+end_example
 
 *** Alternate theme
@@ -22,7 +22,7 @@ Use the ~alternate~ keyword to set your alternate theme in your config
 file.
 
 #+begin_example
-default my-default-theme
+$ default my-default-theme
 #+end_example
 
 ** Usage
