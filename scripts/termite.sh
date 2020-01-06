@@ -16,6 +16,12 @@ fi
 
 # Update theme
 cp "$TERMITE_CONFIG_DIR/base-config" "$TERMITE_CONFIG_DIR/config"
+
+TERMITE_LOCAL_CONFIG="$TERMITE_CONFIG_DIR/local-config"
+if [ -f "$TERMITE_LOCAL_CONFIG" ]; then
+    cat "$TERMITE_LOCAL_CONFIG" >> "$TERMITE_CONFIG_DIR/config"
+fi
+
 cat "$TERMITE_THEME" >> "$TERMITE_CONFIG_DIR/config"
 
 # Reload config
