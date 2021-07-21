@@ -1,3 +1,3 @@
 #!/usr/bin/sh
 
-emacsclient -e '(cjv-load-active-theme)' > /dev/null 2>&1
+emacsclient -e '(counsel-load-theme-action (my/get-active-theme))' > /dev/null 2>&1
