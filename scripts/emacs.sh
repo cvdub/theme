@@ -1,3 +1,3 @@
 #!/usr/bin/sh
 
-emacsclient -e '(counsel-load-theme-action (my/get-active-theme))' > /dev/null 2>&1
+emacsclient -e '(my/set-active-theme)' > /dev/null 2>&1
